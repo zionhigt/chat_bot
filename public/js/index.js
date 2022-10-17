@@ -1,5 +1,6 @@
 import Api from "./components/utils/api.js";
-const api = Api("http://192.168.1.81:3000");
+console.log()
+const api = Api(window.location.origin);
 
 import socket from "./components/utils/socket.js";
 socket();
