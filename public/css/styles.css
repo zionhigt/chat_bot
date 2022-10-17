@@ -1,0 +1,42 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.chat__tool {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+
+.msg__container {
+    max-height: 180px;
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+.write__tool input[type='submit'] {
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.message__display {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+
+}

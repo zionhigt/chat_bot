@@ -1,0 +1,14 @@
+{
+  "name": "bootstraped",
+  "description": "Auto genrated project",
+  "main": "index.js",
+  "authors": [
+    "Sébastien larcher"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zionhigt/express_app_template",
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "socket.io-client": "npm:socket.io-client#^4.5.3"
+  }
+}

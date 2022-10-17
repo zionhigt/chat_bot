@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Template</title>
+</head>
+<body style="font-family: sans-serif; overflow: hidden;">
+    <div class="container">
+        <div id="chatTool" class="chat__tool">
+            <div class="msg__container">
+                <!-- here come conversation messages -->
+            </div>
+            <div class="write__tool">
+                <form id="messageInput" action="/">
+                    <label for="message">Posez moi votre question</label>
+                    <textarea name="message" id="messageInput" cols="30" rows="10"></textarea>
+                    <input type="submit" value="envoyer">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/dist/socket.io-client/dist/socket.io.min.js"></script>
+    <script src="/dist/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
