@@ -1,4 +1,12 @@
 export default function(api) {
+    const spawnNotification = function (body, icon, title) {
+        const options = {
+          body: body,
+          icon: icon
+        };
+        const n = new Notification(title, options);
+      }
+      
     const getMessageItem = function(message) {
         return $("<div>")
         .addClass("message__display")
@@ -30,6 +38,7 @@ export default function(api) {
 
     $(document).on("iampostman", function(event) {
         event.stopPropagation();
+        spawnNotification(event.detail.mails[0], null, "Nouveau message")
         printMessagesList(event.detail.mails);
     })
 }

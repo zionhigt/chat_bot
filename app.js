@@ -15,9 +15,9 @@ app.use(["/dist"], express.static(path.join(__dirname, "bower_components")));
 app.use(function(req, res, next) {
     if (req.headers.referer) {
         console.log([
-            "\x1b[35m" + new Date(),
+            "\x1b[35m" + new Date().toLocaleString(),
             "\x1b[36m" + req.method,
-            "\x1b[33m" + req.headers.referer
+            "\x1b[33m" + new URL(req.url, req.headers.referer).href
         ].join("  ")  + "\x1b[37m");
     }
     next();
