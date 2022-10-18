@@ -10,6 +10,7 @@ app.use((req, res, next)=>{
 	res.setHeader('Access-Control-Allow-Credentials', 'true');
 	next();
 });
+require("./controllers/session.js")(app);
 app.use(["/"], express.static(path.join(__dirname, "public")));
 app.use(["/dist"], express.static(path.join(__dirname, "bower_components")));
 app.use(function(req, res, next) {

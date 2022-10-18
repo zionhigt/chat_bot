@@ -4,7 +4,12 @@ export default function(api) {
           body: body,
           icon: icon
         };
-        const n = new Notification(title, options);
+        document.dispatchEvent(new CustomEvent("notify", {
+            detail: {
+                options,
+                title
+            }
+        }))
       }
       
     const getMessageItem = function(message) {
