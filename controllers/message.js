@@ -1,4 +1,4 @@
-const eventEmitter = require("../events/emitter.js");
+const eventEmitter = require("../events/emitter.js")();
 
 
 exports.postMessage = (req, res) => {

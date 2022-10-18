@@ -4,7 +4,7 @@
   "description": "Auto genrated project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --host=0.0.0.0",
+    "start": "nodemon index.js --host=0.0.0.0 --ignore '*.json'",
     "test": "jest --detectOpenHandles"
   },
   "keywords": [],

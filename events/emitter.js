@@ -8,11 +8,14 @@ module.exports = (function() {
     var instance = null;
     return new function() {
         this.getEmitter = function() {
+            console.log(instance)
             if (instance == null) {
-                instance = _getInstance();
+                instance = _getInstance(this);
                 _getInstance = null;
             }
+            instance.on("test", function() {
+            })
             return instance;
         }
     }
-})().getEmitter();
+})().getEmitter;

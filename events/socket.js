@@ -1,13 +1,11 @@
-const eventEmitter = require("./emitter.js");
+const eventEmitter = require("./emitter.js")();
 
 module.exports = function(io) {
     io.on("connection", function(client) {
-        // eventEmitter.emit("postman", client.id, "I'm the super bot ");
         eventEmitter.emit("comein", client);
         client.emit("room", client.id);
     })
     eventEmitter.on("postman", function(roomID, messages) {
-        console.log("Recu")
         if (!Array.isArray(messages)) {
             messages = [messages];
         }
